@@ -1,0 +1,17 @@
+# Fetch n8n Backend
+
+## Workflow Name
+Fetch - Compare Backend
+
+## Webhook Endpoint
+
+POST /fetch-compare
+
+## Input Example
+
+```json
+{
+  "category": "food",
+  "query": "KFC",
+  "location": "Colombo Fort"
+}
