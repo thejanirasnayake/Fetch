@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +23,7 @@ import {
   Loader2,
 } from "lucide-react";
 
-export default function Dashboard() {
+function DashboardContent() {
   const searchParams = useSearchParams();
 
   const [searchText, setSearchText] = useState("");
@@ -533,5 +533,12 @@ export default function Dashboard() {
         </Link>
       </nav>
     </main>
+  );
+}
+export default function Dashboard() {
+  return (
+    <Suspense fallback={<main className="min-h-screen bg-[#F5F7F5]" />}>
+      <DashboardContent />
+    </Suspense>
   );
 }
