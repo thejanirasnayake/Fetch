@@ -431,6 +431,15 @@ function DashboardContent() {
                         <p className="text-xs text-gray-500 font-bold">
                           {item["PickMe Time"]}
                         </p>
+
+                        <a
+                          href="https://pickme.lk/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-block bg-green-600 text-white text-xs font-black px-3 py-2 rounded-xl"
+                        >
+                          Open PickMe
+                        </a>
                       </div>
 
                       <div className="bg-gray-50 rounded-2xl p-4">
@@ -443,6 +452,15 @@ function DashboardContent() {
                         <p className="text-xs text-gray-500 font-bold">
                           {item["Uber Time"]}
                         </p>
+
+                        <a
+                          href="https://www.ubereats.com/lk/near-me/sri-lankan?srsltid=AfmBOopR50wTcIX89Pzp8eSaEWs6v4Sw4f76DkbHf7d11i8-Pn6rzY_2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-block bg-black text-white text-xs font-black px-3 py-2 rounded-xl"
+                        >
+                          Open Uber Eats
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -535,6 +553,7 @@ function DashboardContent() {
     </main>
   );
 }
+
 export default function Dashboard() {
   return (
     <Suspense fallback={<main className="min-h-screen bg-[#F5F7F5]" />}>
